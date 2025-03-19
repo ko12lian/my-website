@@ -835,3 +835,54 @@ contact-form button:hover {
         font-size: 16px;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
