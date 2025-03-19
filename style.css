@@ -745,3 +745,43 @@ contact-form button:hover {
     color: #444;
     margin: 5px 0;
 }
+
+/* Для экранов меньше 768px (телефоны) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Чуть больше текста для удобства чтения */
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Меню в столбик */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
