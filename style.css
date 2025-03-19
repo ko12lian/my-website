@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #221717;
+    line-height: 1.6;
+}
+
+/* 🔥 Хедер */
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* 🔥 Главный блок */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('images/background.jpg') center/cover;
+    color: rgb(249, 249, 249);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hero p {
+    position: relative;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    background: #f4a261;
+    color: #fdfbfb;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e76f51;
+}
+
+/* 🔥 Форма бронирования */
+#booking-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fbf9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#booking-form label {
+    display: block;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+#booking-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f2ecec;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#booking-form button {
+    width: 100%;
+    padding: 12px;
+    background: #f4a261;
+    border: none;
+    color: #f4eeee;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#booking-form button:hover {
+    background: #e76f51;
+}
+
+#booking-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* 🔥 Подвал */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: rgb(245, 242, 242);
+    margin-top: 50px;
+}
+
+/* 🔥 Секция портфолио */
+.portfolio {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.portfolio h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.portfolio p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* 🔥 Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* 🔥 Секция прайс-листа */
+.price {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.price h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* 🔥 Галерея прайса */
+.price-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.price-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 🔥 Анимация при наведении */
+.price-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.price-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* 🔥 Контакты */
+.contacts {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.contacts h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contacts p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* 🔥 Контейнер с контактами */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* 🔥 Информация о контактах */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* 🔥 Социальные сети */
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* 🔥 Форма обратной связи */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fcfbfa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddc9b3;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #ddc9b3;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+contact-form button:hover {
+    background: #0056b3;
+}
+
+/* 🔥 Карта */
+.map {
+    margin-top: 40px;
+}
+
+/* 🔥 ГЛАВНАЯ: ФОНОВАЯ КАРТИНКА */
+.hero {
+    background: url('images/background.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* 🔥 КНОПКИ */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff6600;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #e55e00;
+}
+
+/* 🔥 ОБО МНЕ */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 🔥 УС
+
+/* 🔥 Форма бронирования */
+.booking-form {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+}
+
+.booking-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.booking-form form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff6600;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #e55e00;
+}
+
+/* 🔥 Секция "Обо мне" */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background: #f5f5f5;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-content .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background: #e55e00;
+}
+
+.about-image {
+    max-width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 Блок с бронью */
+.booking-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background: #fff;
+}
+
+.booking-text {
+    max-width: 50%;
+}
+
+.booking-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.booking-text p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.booking-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.booking-text li {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.booking-text li::before {
+    content: "✔️";
+    color: #ff6600;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.booking-text .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-top: 15px;
+}
+
+.booking-text .btn:hover {
+    background: #e55e00;
+}
+
+.booking-image {
+    max-width: 45%;
+}
+
+.booking-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 Хедер (шапка сайта) */
+.hero {
+    background: url('images/background.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #e55e00;
+}
+
+/* 🔥 Блок с быстрым доступом */
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.link-card {
+    width: 30%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+}
+
+.link-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.link-card h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.link-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.link-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.link-card .btn:hover {
+    background: #e55e00;
+}
+
+/* 🔥 Секция прайс-листа */
+.price-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 20px;
+    background: #ECF0F1;
+}
+
+.price-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+    width: 30%;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price-card h3 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #2C3E50;
+}
+
+.price-card p {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0;
+}

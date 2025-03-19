@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование съемки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Забронировать съемку</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-form">
+        <h2>Выберите дату, время и тип съемки</h2>
+        <form id="booking-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" required>
+
+            <label for="service">Выберите услугу:</label>
+            <select id="service" required>
+                <option value="Портретная съемка">Портретная съемка</option>
+                <option value="Свадебная съемка">Свадебная съемка</option>
+                <option value="Студийная съемка">Студийная съемка</option>
+            </select>
+
+            <button type="submit">Отправить заявку</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 N.A. PORTRAITS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
