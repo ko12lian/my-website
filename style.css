@@ -886,3 +886,37 @@ contact-form button:hover {
         border-radius: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;  /* Размещаем карточки в колонку */
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;  /* Уменьшаем ширину, чтобы не прилипали к краям */
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;  /* Картинка будет на всю ширину карточки */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
